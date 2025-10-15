@@ -1,10 +1,15 @@
+"use client";
 import Image from 'next/image';
-import styles from '../page.module.css';
+import styles from '../../page.module.css';
+import { useParams } from 'next/navigation'; // Ou `react-router` para `pages` router
 
 export default function Home() {
+  const params = useParams();
+  const { id } = params;
+
   return (
     <div className={styles.page}>
-      <h1>Depoimentos</h1>
+      <h1>Especialidade com ID: {id}</h1>
       <main className={styles.main}>
         <Image
           className={styles.logo}
