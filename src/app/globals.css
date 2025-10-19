@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:wght@700&display=swap');
+
+/* Configurações Iniciais */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --dark-blue: #076980;
+  --blue: #08a6c5;
+  --main-font: 'Montserrat', Arial, Helvetica, sans-serif;
+  --bold: 400;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -17,17 +25,76 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--dark-blue);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--main-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.83rem;
+  margin-bottom: 8vh;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p,
+blockquote {
+  font-family: 'Nunito', 'Arial', sans-serif;
+  font-weight: 400;
+}
+
+.white-background {
+  background-color: transparent;
+  color: var(--dark-blue);
+}
+
+.blue-background {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.dark-background {
+  background-color: var(--dark-blue);
+  color: #fff;
+}
+
+.medium {
+  font-weight: var(--bold);
+}
+
+footer {
+  background-color: #f0f0f0;
+  color: #000;
 }
 
 a {
@@ -35,8 +102,28 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (max-width: 600px) and (min-width: 320px) {
+  h1 {
+    font-size: 2.125rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+  }
+
+  h6 {
+    font-size: 0.5rem;
   }
 }
