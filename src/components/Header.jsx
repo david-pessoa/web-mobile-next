@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import '../styles/header.css';
 
 export default function Header() {
   const headerStyle = {
@@ -6,11 +7,6 @@ export default function Header() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-  };
-
-  const logoStyle = {
-    height: '5rem',
-    width: 'auto',
   };
 
   const listStyle = {
@@ -21,37 +17,37 @@ export default function Header() {
   };
 
   return (
-    <div className="dark-background" style={headerStyle}>
-      <img style={logoStyle} src="/assets/images/logo.png" alt="Logo do site" />
+    <header className="dark-background" style={headerStyle}>
+      <img src="/assets/images/logo.png" alt="Logo do site" />
       <nav>
         <ul style={listStyle}>
           <li>
-            <a href="#inicio">
+            <Link href="#inicio">
               <h5>Início</h5>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#especialidades">
+            <Link href="#especialidades">
               <h5>Especialidades</h5>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#sobre">
+            <Link href="#sobre">
               <h5>Sobre</h5>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#depoimentos">
+            <Link href="#depoimentos">
               <h5>Depoimentos</h5>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contato">
+            <Link href="#contato">
               <h5>Contato</h5>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }

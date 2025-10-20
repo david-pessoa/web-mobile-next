@@ -1,12 +1,10 @@
-import "./globals.css";
+import './globals.css';
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <link rel="icon" href="/favicon.ico" />
-      <body>
-        {children}
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
