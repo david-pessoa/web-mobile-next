@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto para desenvolvimento de website para clínica odontológica 🦷
+## Integrantes do grupo
+<table>
+  <thead>
+    <tr>
+      <th>Davi Portes</th>
+      <th>David Pessoa</th>
+      <th>Pedro Henrique</th>
+      <th>Lucas Lago</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/DaviPortes" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/179884428?v=4" style="width: 150px; height: 150px;"/>
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/david-pessoa" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/104323068?v=4" style="width: 150px; height: 150px;"/>
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/peki20062006-a11y" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/227485917?v=4" style="width: 150px; height: 150px;"/>
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/LucasTkoLago007" target="_blank">
+          <img src="https://avatars.githubusercontent.com/u/227432884?v=4" style="width: 150px; height: 150px;"/>
+        </a>
+      </td>
+    </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>10417139</th>
+        <th>10402647</th>
+        <th>10737627</th>
+        <th>10436247</th>
+      </tr>
+    </tfoot>
+</table>
 
-## Getting Started
+## A Ideia do projeto
+Este projeto tem como objetivo elaborar um website para uma clínica de odontologia, que seja capaz de: apresentar a clínica, mostrar os serviços prestados, exibir as informções para contato e permitir que o paciente agende uma consulta ao mesmo tempo em que cumpre os requisitos pedidos pela disciplina.
 
-First, run the development server:
+## Elaboração do Protótipo
+Na fase inicial de prototipação, elaboramos wireframes para telas de dispositivos smartphone e Desktop. Para cada formato de tela, desenvolvemos diferentes versões da aplicação, a fim de tornar o site responsivo. O website foi feito em uma única página, dividida em 5 seções: Início, Especialidades, Sobre, Depoimentos e Contato.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### A página do website
+A seção de início tem o intuito de apresentar o consultório. A página web possui uma navbar que permite a navegação entre as seções da página e, ao fim, um formulário para envio de mensagens por email para agendamento de consultas, uma visão do consultório do Google Maps além de uma seção de rodapé com as informações de contato.  
+Além disso, a página exibe:
+ - imagens do consultório;
+ - os serviços prestados (através de fotos e de uma breve explicação);
+ - uma seção dedicada a descrever a história do consultório e a trajetória da profissional dentista
+ - uma foto da dentista da clínica com seu nome e formação abaixo.
+ - uma barra de status mostrando o número de pacientes atendidos, anos de experiência, número de certificações, número de procedimentos realizados, etc.;
+ - um carrossel com os depoimentos dos pacientes atendidos;
+
+## Vantagens de utilizar o Next
+explicar vantagens...
+
+## Preparando o ambiente
+Para rodar o projeto na sua máquina é necessário possuir:
+- Node.js instalado
+### 1) Clone o projeto no GitHub
+```
+https://github.com/david-pessoa/web-mobile-next.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2) Entre no diretório raiz do projeto (/web-mobile-next) e instale as dependências
+```
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3) Execute a aplicação
+```
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tutorial do projeto
+<a href="./public/check-in-3.pdf">Clique aqui</a> para ler o tutorial do projeto com a explicação do código desenvolvido.
 
-## Learn More
+## Imagens do Protótipo
+### Versão mobile
+A versão mobile do protótipo foi feita para a tela de um IPhone SE. A intenção é garantir que o conteúdo consiga caber até mesmo dentro de telas de smartphone com largura pequena (neste caso 320px)
 
-To learn more about Next.js, take a look at the following resources:
+<img src="./public/imagens_prototipo/iPhone SE - Página Inicial.png">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Versão Desktop
+A versão para Desktop busca se adaptar a dispositivos com telas maiores, segue abaixo imagem do esboço para a versão desktop:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<img src="./public/imagens_prototipo/desktop.png">
