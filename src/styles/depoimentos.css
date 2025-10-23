@@ -1,0 +1,128 @@
+#depoimentos{
+    margin-top: 10vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+#depoimentos ul{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+#depoimentos .swiper .swiper-pagination{
+    margin-bottom: 5px;
+}
+
+#depoimentos .swiper-button-prev{
+    left: var(--swiper-navigation-sides-offset, 60px);
+    right: auto;
+}
+
+#depoimentos .swiper-button-next{
+    left: auto;
+    right: var(--swiper-navigation-sides-offset, 60px);
+}
+
+#depoimentos .swiper-button-prev, .swiper-button-next.swiper-button-next{
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    margin-top: -15rem;
+    top: auto;
+}
+
+#depoimentos .swiper-pagination-bullet-active{ 
+    background-color: #FFF;
+}
+
+#depoimentos ul li{
+    width: 20.295rem;
+    height: 19.438rem;
+    border-radius: 7px;
+    margin-bottom: 7vh;
+    list-style: none;
+    padding-left: 1.438rem;
+    padding-right: 1.438rem;
+    box-shadow: 5px 5px 6px rgba(0,0,0,0.5);
+}
+
+#depoimentos ul li .quotes{
+    font-family: "Plus Jakarta Sans", "Arial", sans-serif;
+    font-size: 6rem;
+}
+
+#depoimentos ul li .below{
+    text-align: end;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: -1rem;
+}
+
+#depoimentos ul li blockquote{
+    font-size: 1rem;
+    margin-top: -3rem;
+    height: 8.063rem;
+}
+
+#depoimentos ul li cite{
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    justify-content: center;
+    font-style: normal;
+    margin-top: -4rem;
+    margin-bottom: 0.6rem;
+
+}
+
+#depoimentos ul li .stars{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffe14b;
+}
+
+@media (max-width: 600px) and (min-width: 320px){
+    #depoimentos ul li{
+        width: 15rem;
+        height: 16rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #depoimentos ul li .quotes{
+        font-size: 4.375rem;
+    }
+
+    #depoimentos ul li .below{
+        margin-top: -0.3rem;
+    }
+
+    #depoimentos ul li blockquote{
+        font-size: 0.8rem;
+        margin-top: -2.5rem;
+        height: 7.5rem;
+    }
+
+    #depoimentos ul li cite{
+        margin-top: -3.5rem;
+        font-size: 0.938rem;
+    }
+
+    #depoimentos ul li .stars{
+        font-size: 1.3rem;  
+    }
+
+    #depoimentos .swiper-button-prev{
+        left: var(--swiper-navigation-sides-offset, 20px);
+        right: auto;
+    }
+
+    #depoimentos .swiper-button-next{
+        left: auto;
+        right: var(--swiper-navigation-sides-offset, 20px);
+    }
+}

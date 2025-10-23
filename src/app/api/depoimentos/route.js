@@ -1,17 +1,6 @@
-export async function getDepoimentos() {
-  fetch('../dados.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Erro ao carregar o JSON: ' + response.status);
-      }
-      const data = response.json();
-      return data.depoimentos;
-    })
-    .catch(error => {
-      console.error(error);
-      const errorResponse = { status: 'Error', error: error };
-      return Response.json(errorResponse);
-    });
+import { NextResponse } from "next/server";
+import data from "@/app/api/dados.json";
 
-  return Response.json(dados);
+export async function GET() {
+  return NextResponse.json(data.depoimentos)
 }
