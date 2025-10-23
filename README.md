@@ -60,11 +60,27 @@ Além disso, a página exibe:
  - um carrossel com os depoimentos dos pacientes atendidos;
 
 ## Vantagens de utilizar o Next
-explicar vantagens...
+### 1) Componentização e Reutilização
+No HTML com JavaScript puro, é comum reperir trechos de código para títulos, paragráfos, cards, sections, etc. No React/Next, cada parte da interface se torna um componente reutilizável, permitindo:
+ - Reutilizar o mesmo código em várias vezes e até em páginas diferentes
+ - Manter um padrão visual e de comportamento
+ - Reduz erros e facilita manutenção
+
+### 2) Renderização no Servidor e Geração Estática
+O NextJS oferece Server Side Rendering e Static Site Generation, ou seja, o conteúdo é pré-renderizado no servidor, melhorando o SEO, tempo de carregamento do site e, portanto, a experiência do usuário.
+
+### 3) Melhor Organização e Escabilidade
+Utilizando o Next/React, é possível separar a lógica, layout (`/components`) e estilo (`/styles`) do site de forma modular, facilitando a manutenção e garantindo a escalabilidade da aplicação em projetos maiores.
+
+### 4) Roteamento Automático
+Num projeto com simplesmente HTML, CSS e JS, é preciso criar manualmente as rotas. Já no Next, para criar a rota `/sobre`, basta criar uma pasta chamada `sobre` dentro da pasta `/app` e criar o arquivo `page.js` dentro de `/sobre`.
 
 ## Preparando o ambiente
-Para rodar o projeto na sua máquina é necessário possuir:
-- Node.js instalado
+Para rodar o projeto na sua máquina é necessário possuir instalados:
+- Node.js 
+- npm (ou outro gerenciador de pacote)
+- git
+
 ### 1) Clone o projeto no GitHub
 ```
 https://github.com/david-pessoa/web-mobile-next.git
@@ -79,9 +95,6 @@ npm install
 ```
 npm run dev
 ```
-
-## Tutorial do projeto
-<a href="./public/check-in-3.pdf">Clique aqui</a> para ler o tutorial do projeto com a explicação do código desenvolvido.
 
 ## Imagens do Protótipo
 ### Versão mobile
