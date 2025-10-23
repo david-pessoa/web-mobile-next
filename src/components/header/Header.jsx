@@ -1,26 +1,14 @@
 import Link from 'next/link';
-import '../styles/header.css';
+import Image from 'next/image';
+import '../../styles/header.css';
 
 export default function Header() {
-  const headerStyle = {
-    padding: '0.8em 2em',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  };
-
-  const listStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    listStyle: 'none',
-    gap: '2vw',
-  };
 
   return (
-    <header className="dark-background" style={headerStyle}>
-      <img src="/assets/images/logo.png" alt="Logo do site" />
+    <header className="dark-background">
+      <Image src="/assets/images/logo.png" alt="Logo do site" height={1649} width={1631} />
       <nav>
-        <ul style={listStyle}>
+        <ul>
           <li>
             <Link href="#inicio">
               <h5>Início</h5>

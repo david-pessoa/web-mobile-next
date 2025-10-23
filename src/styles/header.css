@@ -1,6 +1,20 @@
-img{
-    height: 5rem;
-    width: auto;
+img {
+  height: 5rem;
+  width: auto;
+}
+
+header {
+  padding: 0.8em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2vw;
 }
 
 @media (max-width: 900px) {
