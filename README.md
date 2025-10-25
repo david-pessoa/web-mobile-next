@@ -96,6 +96,33 @@ npm install
 npm run dev
 ```
 
+## Explicação do código desenvolvido
+
+Nesta versão em Next da aplicação, a página inicial do site (acessada pela rota `/`) é representada pelo componente `<Home/>`, que foi divido em outros 7 componentes principais:
+ - Header: Fica no topo da página e contém a navbar e o logo;
+ - HomeImg: Apresenta uma imagem do consultório
+ - Especialidades: Apresenta os serviços oferecidos pela profissional dentista
+ - Sobre: Apresenta uma imagem da profissional ao lado de um texto exibindo sua trajetória profissional
+ - StatusBar: Apresenta dados quantitativos sobre a profissional
+ - Depoimentos: apresenta um carrossel de depoimentos de alguns pacientes sobre o atendimento oferecido
+ - Footer: Apresenta um formulário para contato ao lado de um iframe exibindo a localização do consultório no Google Maps e informações de contato (endereço, telefone, WhatsApp, etc.).
+
+O site também contará com páginas em que será possível acessar mais informações sobre uma especialidade oferecida por meio da rota `/especialidade/[id]` (Ainda em desenvolvimento)
+Os componentes foram escritos em arquivos `.jsx` e guardados na pasta `/components`. Os estilos CSS aplicados nesses componentes estão definidos dentro da pasta `/styles`, com um arquivo CSS para cada componente, além do `global.css` que aplica estilos em escopo global.
+
+### Header
+A estrutura do Header é definida dentro da tag <header>, que possui a classe dark-background para aplicar uma cor de fundo azul escuro. Dentro dele, temos:
+ - Um componente `<Image/>` que contém a imagem do logotipo da clínica.
+ - Uma tag `<nav>` que agrupa os links de navegação.
+ - Uma lista não ordenada (`<ul>`) onde cada item (`<li>`) contém um link (`<Link/>`). Esses links direcionam o usuário para as seções correspondentes na mesma página (ex: href="#especialidades").
+
+O CSS é responsável por posicionar o logotipo e os links de navegação, geralmente usando display: flex no `<header>`. A classe `.dark-background` aplica um fundo escuro, e outras regras definem as cores e o estilo dos links, garantindo que o cabeçalho seja visualmente coeso e funcional.
+
+### HomeImg
+A estrutura é minimalista: `<section id="inicio">`. Embora esteja vazia no HTML, ela serve como um contêiner que será totalmente estilizado pelo CSS.
+
+
+
 ## Imagens do Protótipo
 ### Versão mobile
 A versão mobile do protótipo foi feita para a tela de um IPhone SE. A intenção é garantir que o conteúdo consiga caber até mesmo dentro de telas de smartphone com largura pequena (neste caso 320px)
