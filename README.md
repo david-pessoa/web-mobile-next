@@ -137,6 +137,21 @@ O componente `<section id="sobre">` contém um `<article class="sobre-container"
 
 A classe `.sobre-container` usa `display: flex` para criar o layout de duas colunas. O CSS também estiliza a imagem (`.sobre-figura img`), a legenda (`figcaption`) e o texto, garantindo uma leitura agradável e uma apresentação profissional. A classe `.blue-background` define uma cor azul claro como cor de fundo do componente.
 
+### Status Bar
+A status bar exibe numa lista não ordenada `<ul>` os dados quantitativos como: número de anos atendendo, quantidade de pacientes atendidos, quantidade de certificações e número de procedimentos realizados.
+O seletor `#status-bar ul` usa `display: flex` para alinhar as estatísticas horizontalmente no Desktop e verticalmente em dispositivos mobile. O CSS define a cor de fundo, a tipografia dos números (`.numero`) e dos textos (`.texto`), criando um forte contraste visual que chama a atenção para os dados, com números em branco num fundo azul escuro. Os depoimentos são exibidos dentro de uma tag `<ul>` como boxes num carrossel (ainda não aplicado). A lista é renderizada dinamicamente pelo Javascript, já que as informações sobre cada um deles (texto, autor e avaliação) estão guardados no arquivo dados.json. Sendo assim, os dados são obtidos através da chamada de API dentro do `useEffect()`. A rota para acessar as informações de todos os depoimentos é `/api/depoimentos`. Os dados dos depoimentos são guardados dentro da variável `dados` definida dentro do `useState()`. Dentro da tag `<ul>`, é inserido um código javascript que itera sobre a lista especialidades através de `dados.map()` para renderizar os boxes com os depoimentos. Para cada depoimento, cria-se um elemento de lista (`<li>`) com o HTML correspondente (texto, autor e avaliação).
+
+O CSS estiliza a aparência dos boxes (`#depoimentos ul li e .dark-background`), como tamanho, cor de fundo e preenchimento. Já as Media Queries ajustam o tamanho dos boxes.
+
+### Footer
+O formulário do rodapé é envolvido pela tag `<form>`, em que cada entrada é representada por um `<input>` (textos curtos), `<textarea>` (textos longos) `<select>` (lista de opções). Cada uma das entradas, assim como suas `<labels>` (explicação do input) é envolvida num `<fieldset>` e no fim do formulário há o botão de submit. Ao lado do formulário é possível encontrar o iframe que exibe a localização do consultório no Google Maps por meio da tag `<iframe>`. Do lado direito, há uma lista das informações de contato envolvidas pela tag `<address>`.
+
+O seletor `.contato-container` usa `display: flex` para organizar o formulário, o mapa e as informações lado a lado em telas grandes. Em telas pequenas, uma Media Query altera `flex-direction` para `column`, empilhando os elementos verticalmente para melhor visualização em dispositivos móveis. O CSS também estiliza todos os elementos do formulário e as informações de contato.
+
+
+
+
+
 
 
 
