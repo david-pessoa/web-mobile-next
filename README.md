@@ -120,6 +120,24 @@ O CSS é responsável por posicionar o logotipo e os links de navegação, geral
 
 ### HomeImg
 A estrutura é minimalista: `<section id="inicio">`. Embora esteja vazia no HTML, ela serve como um contêiner que será totalmente estilizado pelo CSS.
+O seletor #inicio no CSS é usado para aplicar um estilo visual marcante. Geralmente, isso inclui:
+ - `background-image`: Uma imagem de alta qualidade do consultório é definida como plano de fundo.
+ - `height`: Uma altura significativa de 70vh para que o componente ocupe a maior parte da tela inicial.
+ - `background-size`: cover: Garante que a imagem de fundo cubra toda a área do componente sem distorção.
+
+### Especialidades
+O componente especialidades exibe os serviços numa lista de boxes para cada serviço oferecido em que há uma imagem demonstrativa e um texto explicativo, que aparece quando o usuário passa o mouse por cima. As informações de nome, descrição da e caminho para a imagem ilustrativa de cada especialidade foram armazenadas no arquivo `dados.json` e são obtidas através da chamada de API dentro do `useEffect()`. A rota para acessar as informações de todas as especialidades é `/api/especialidades`. Os dados de todas as especialidades são guardados dentro da variável `dados` definida dentro do `useState()`. Dentro da tag `<ul>`, é inserido um código javascript que itera sobre a lista especialidades através de `dados.map()` para renderizar os boxes com as especialidades. Para cada especialidade, cria um elemento de lista (`<li>`) com o HTML correspondente (imagem, nome e descrição).
+
+O CSS estiliza a aparência dos cards de especialidades. Regras para #especialidades ul usam display: flex e flex-wrap: wrap para organizar os itens em uma grade responsiva. Em cada item (`<li>`) da lista, é colocada uma tag `<figure>` contendo uma imagem ilustrativa (`<img>`) e um `<figcaption>` que possui o título e a descrição da especialidade ofertada. Os cards foram estilizados para que o usuário, ao passar o mouse por cima de uma figura, a descrição da respectiva espacialidade apareça.
+
+### Sobre
+O componente `<section id="sobre">` contém um `<article class="sobre-container">` que organiza o conteúdo em duas colunas:
+ - Uma tag `<aside>` para exibir a foto e o nome da dentista.
+ - Um parágrafo (`<p>`) com o texto descritivo sobre a profissional.
+
+A classe `.sobre-container` usa `display: flex` para criar o layout de duas colunas. O CSS também estiliza a imagem (`.sobre-figura img`), a legenda (`figcaption`) e o texto, garantindo uma leitura agradável e uma apresentação profissional. A classe `.blue-background` define uma cor azul claro como cor de fundo do componente.
+
+
 
 
 
