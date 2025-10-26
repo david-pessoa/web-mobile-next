@@ -34,7 +34,7 @@
   padding-top: 1rem;
 }
 
-.especialidades figure figcaption h4 {
+.especialidades figure figcaption h5 {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -70,7 +70,7 @@
     font-size: 0.938rem;
   }
 
-  .especialidades figure:hover figcaption h4 {
+  .especialidades figure:hover figcaption h5 {
     margin-bottom: 0.4rem;
   }
 }

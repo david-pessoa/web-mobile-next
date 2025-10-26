@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 export default function Footer() {
+  const iconStyle = {
+    color: '#08a6c5',
+    fontSize: '2em',
+  };
+
   return (
     <footer className={styles.contato}>
       <section>
@@ -96,23 +101,23 @@ export default function Footer() {
           title="Mapa da clínica"
         ></iframe>
 
-        <address className="info">
+        <address>
           <h4>Fale Conosco</h4>
           <ul>
             <li>
-              <FontAwesomeIcon icon={faPhone} />
+              <FontAwesomeIcon icon={faPhone} style={iconStyle} />
               <h6>(11) 98839-8134</h6>
             </li>
             <li>
-              <FontAwesomeIcon icon={faWhatsapp} />
+              <FontAwesomeIcon icon={faWhatsapp} style={iconStyle} />
               <h6>(11) 98839-8134</h6>
             </li>
             <li>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon icon={faEnvelope} style={iconStyle} />
               <h6>consultoria.alzira@gmail.com</h6>
             </li>
             <li>
-              <FontAwesomeIcon icon={faLocationDot} />
+              <FontAwesomeIcon icon={faLocationDot} style={iconStyle} />
               <h6>Rua Chemin Del Pra, nº 172, São Paulo, Santana</h6>
             </li>
           </ul>
