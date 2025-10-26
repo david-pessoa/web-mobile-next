@@ -1,16 +1,16 @@
 'use client';
-import '../../styles/sobre.module.css';
+import styles from '../../styles/sobre.module.css';
 import Image from 'next/image';
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="blue-background">
+    <section className={`${styles.sobre} blue-background`}>
       <h2>Sobre</h2>
-      <article className="sobre-container">
-        <aside className="sobre-coluna">
+      <article className={styles.sobreContainer}>
+        <aside className={styles.sobreColuna}>
           <h4>A dentista</h4>
-          <figure className="sobre-figura">
-            <Image src="/assets/images/dentista.jpg" alt="A dentista" width={2153} height={3390}/>
+          <figure className={styles.sobreFigura}>
+            <Image src="/assets/images/dentista.jpg" alt="A dentista" width={2153} height={3390} />
             <figcaption>
               <h6 className="medium">Dra. Alzira Varão Lima</h6>
               <h6>Periodontista formada pela USP</h6>
@@ -18,7 +18,7 @@ export default function Sobre() {
           </figure>
         </aside>
 
-        <p className="sobre-coluna">
+        <p className={styles.sobreColuna}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sem viverra,
           vulputate augue quis, interdum urna. Etiam pharetra ex non auctor tincidunt. Etiam ornare
           leo in rutrum elementum. Curabitur in urna dolor. Sed feugiat ullamcorper massa in

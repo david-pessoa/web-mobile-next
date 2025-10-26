@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import '../../styles/header.module.css';
+import styles from '../../styles/header.module.css';
 
 export default function Header() {
-
   return (
-    <header className="dark-background">
+    <header className={`${styles.header} dark-background`}>
       <Image src="/assets/images/logo.png" alt="Logo do site" height={1649} width={1631} />
       <nav>
         <ul>

@@ -1,5 +1,5 @@
-import '../../styles/initialSection.module.css';
+import styles from '../../styles/initialSection.module.css';
 
 export default function HomeImg() {
-  return <div id="inicio"></div>;
+  return <section className={styles.inicio}></section>;
 }

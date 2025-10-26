@@ -1,77 +1,76 @@
-#especialidades ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    max-width: 1440px;
-    margin: 0 auto;
-    gap: 3.188rem;
-    justify-content: center;
-    transition: all;
+.especialidades ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 3.188rem;
+  justify-content: center;
+  transition: all;
 }
 
-#especialidades figure{
-    position: relative;
-    display: flex;
-    flex-flow: column;
-    max-width: 25rem;
-    overflow: hidden;
-    box-shadow: 5px 5px 6px rgba(0,0,0,0.5);
+.especialidades figure {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  max-width: 25rem;
+  overflow: hidden;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.5);
 }
 
-#especialidades figure:hover img{
-    display: block;
-    border-radius: 7px;
+.especialidades figure:hover img {
+  display: block;
+  border-radius: 7px;
 }
 
-#especialidades figure figcaption{
-    background-color: rgba(4, 120, 139, 0.91);
-    color: #FFF;
-    border-radius: 0 0 7px 7px;
-    width: 100%;
-    position: absolute;
-    bottom: 0; /* gruda na parte inferior */
-    transition: all .7ss ease-in-out;
-    padding-top: 1rem;
+.especialidades figure figcaption {
+  background-color: rgba(4, 120, 139, 0.91);
+  color: #fff;
+  border-radius: 0 0 7px 7px;
+  width: 100%;
+  position: absolute;
+  bottom: 0; /* gruda na parte inferior */
+  transition: all 0.7ss ease-in-out;
+  padding-top: 1rem;
 }
 
-#especialidades figure figcaption h4{
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    transition: all .7s ease-in-out;
+.especialidades figure figcaption h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  transition: all 0.7s ease-in-out;
 }
 
-#especialidades figure figcaption p{
-	font-size: 1.125rem;
-    max-height: 0;        /* esconde */
-    opacity: 0;           /* invisível */
-    overflow: hidden;     /* não deixa vazar */
-    transition: all .7s ease-in-out;
-    margin-left: 1rem;
-    margin-right: 1rem;
+.especialidades figure figcaption p {
+  font-size: 1.125rem;
+  max-height: 0; /* esconde */
+  opacity: 0; /* invisível */
+  overflow: hidden; /* não deixa vazar */
+  transition: all 0.7s ease-in-out;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-#especialidades figure:hover figcaption p{
+.especialidades figure:hover figcaption p {
   max-height: 300px;
-  opacity: 1; 
+  opacity: 1;
   margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) and (min-width: 320px)
-{
-    #especialidades ul{
-        max-width: 100vw;
-    }
+@media (max-width: 600px) and (min-width: 320px) {
+  .especialidades ul {
+    max-width: 100vw;
+  }
 
-    #especialidades figure{
-        max-width: 18rem;
-    }
+  .especialidades figure {
+    max-width: 18rem;
+  }
 
-    #especialidades figure figcaption p{
-        font-size: 0.938rem;
-    }
+  .especialidades figure figcaption p {
+    font-size: 0.938rem;
+  }
 
-    #especialidades figure:hover figcaption h4{
-        margin-bottom: 0.4rem;
-    }
+  .especialidades figure:hover figcaption h4 {
+    margin-bottom: 0.4rem;
+  }
 }

@@ -1,6 +1,9 @@
 'use client';
-import "../../styles/depoimentos.module.css"
+import styles from "../../styles/depoimentos.module.css"
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar as faSolidStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faRegularStar } from "@fortawesome/free-regular-svg-icons";
 
 export default function Depoimentos() {
   const [dados, setDados] = useState(null);
@@ -15,12 +18,11 @@ export default function Depoimentos() {
   }, []);
 
   return (
-    <section id="depoimentos" className="blue-background">
+    <section className={`${styles.depoimentos} blue-background`}>
       <h2>Depoimentos</h2>
       <article className="swiper">
         <ul id="listaDepoimentos" className="swiper-wrapper">
-          {dados &&
-            dados.map((depoimento, i) => (
+          {dados?.map((depoimento, i) => (
               <li key={i} className="dark-background swiper-slide">
                 <span className="quotes">“</span>
                 <blockquote>{depoimento.texto}</blockquote>
@@ -29,9 +31,9 @@ export default function Depoimentos() {
                 <span className="stars">
                   {Array.from({ length: depoimento.estrelas }).map((_, index) =>
                     index + 1 > depoimento.estrelas ? (
-                      <i key={index} className="fa-solid fa-star"></i>
+                      <FontAwesomeIcon key={index} icon={faSolidStar} />
                     ) : (
-                      <i class="fa-regular fa-star"></i>
+                      <FontAwesomeIcon key={index} icon={faRegularStar} />
                     )
                   )}
                 </span>

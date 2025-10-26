@@ -131,7 +131,7 @@ O componente especialidades exibe os serviços numa lista de boxes para cada ser
 O CSS estiliza a aparência dos cards de especialidades. Regras para #especialidades ul usam display: flex e flex-wrap: wrap para organizar os itens em uma grade responsiva. Em cada item (`<li>`) da lista, é colocada uma tag `<figure>` contendo uma imagem ilustrativa (`<img>`) e um `<figcaption>` que possui o título e a descrição da especialidade ofertada. Os cards foram estilizados para que o usuário, ao passar o mouse por cima de uma figura, a descrição da respectiva espacialidade apareça.
 
 ### Sobre
-O componente `<section id="sobre">` contém um `<article class="sobre-container">` que organiza o conteúdo em duas colunas:
+O componente `<section id="sobre">` contém um `<article className="sobre-container">` que organiza o conteúdo em duas colunas:
  - Uma tag `<aside>` para exibir a foto e o nome da dentista.
  - Um parágrafo (`<p>`) com o texto descritivo sobre a profissional.
 

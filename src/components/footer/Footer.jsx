@@ -1,14 +1,16 @@
-import '../../styles/footer.module.css';
-
+import styles from '../../styles/footer.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 export default function Footer() {
   return (
-    <footer id="contato">
-      <section class="contato-container">
-        <form id="form" class="formulario" data-parsley-validate>
+    <footer className={styles.contato}>
+      <section className="contato-container">
+        <form id="form" className="formulario" data-parsley-validate>
           <h4>Formulário de Contato</h4>
 
-          <fieldset class="input-field">
-            <label for="nome">Nome</label>
+          <fieldset className="input-field">
+            <label htmlFor="nome">Nome</label>
             <input
               type="text"
               id="nome"
@@ -18,8 +20,8 @@ export default function Footer() {
             />
           </fieldset>
 
-          <fieldset class="input-field">
-            <label for="email">Email</label>
+          <fieldset className="input-field">
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -30,8 +32,8 @@ export default function Footer() {
             />
           </fieldset>
 
-          <fieldset class="input-field">
-            <label for="assunto">Assunto</label>
+          <fieldset className="input-field">
+            <label htmlFor="assunto">Assunto</label>
             <input
               type="text"
               id="assunto"
@@ -41,8 +43,8 @@ export default function Footer() {
             />
           </fieldset>
 
-          <fieldset class="input-field">
-            <label for="especialidade">Selecione uma especialidade</label>
+          <fieldset className="input-field">
+            <label htmlFor="especialidade">Selecione uma especialidade</label>
             <select
               id="especialidade"
               name="especialidade"
@@ -59,8 +61,8 @@ export default function Footer() {
             </select>
           </fieldset>
 
-          <fieldset class="input-field">
-            <label for="modalidade">Modalidade</label>
+          <fieldset className="input-field">
+            <label htmlFor="modalidade">Modalidade</label>
             <select
               id="modalidade"
               name="modalidade"
@@ -73,8 +75,8 @@ export default function Footer() {
             </select>
           </fieldset>
 
-          <fieldset class="input-field">
-            <label for="mensagem">Mensagem</label>
+          <fieldset className="input-field">
+            <label htmlFor="mensagem">Mensagem</label>
             <textarea
               id="mensagem"
               name="mensagem"
@@ -83,34 +85,34 @@ export default function Footer() {
             ></textarea>
           </fieldset>
 
-          <button type="submit" class="medium">
+          <button type="submit" className="medium">
             Enviar
           </button>
         </form>
 
         <iframe
-          class="mapa"
+          className="mapa"
           src="https://maps.google.com/maps?q=Rua%20Chemin%20Del%20Pra,%20172,%20São%20Paulo&t=m&z=15&output=embed&iwloc=near"
           title="Mapa da clínica"
         ></iframe>
 
-        <address class="info">
+        <address className="info">
           <h4>Fale Conosco</h4>
           <ul>
             <li>
-              <i class="fa-2x fa fa-phone"></i>
+              <FontAwesomeIcon icon={faPhone} />
               <h6>(11) 98839-8134</h6>
             </li>
             <li>
-              <i class="fa-2x fab fa-whatsapp"></i>
+              <FontAwesomeIcon icon={faWhatsapp} />
               <h6>(11) 98839-8134</h6>
             </li>
             <li>
-              <i class="fa-2x fa fa-envelope"></i>
+              <FontAwesomeIcon icon={faEnvelope} />
               <h6>consultoria.alzira@gmail.com</h6>
             </li>
             <li>
-              <i class="fa-2x fa fa-location-dot"></i>
+              <FontAwesomeIcon icon={faLocationDot} />
               <h6>Rua Chemin Del Pra, nº 172, São Paulo, Santana</h6>
             </li>
           </ul>

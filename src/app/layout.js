@@ -1,5 +1,4 @@
 import './globals.css';
-//import '../styles/font-awesome.min.css';
 import '../styles/swiper.min.css';
 
 export default function RootLayout({ children }) {
