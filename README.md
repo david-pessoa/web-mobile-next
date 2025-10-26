@@ -96,6 +96,66 @@ npm install
 npm run dev
 ```
 
+## Explicação do código desenvolvido
+
+Nesta versão em Next da aplicação, a página inicial do site (acessada pela rota `/`) é representada pelo componente `<Home/>`, que foi divido em outros 7 componentes principais:
+ - Header: Fica no topo da página e contém a navbar e o logo;
+ - HomeImg: Apresenta uma imagem do consultório
+ - Especialidades: Apresenta os serviços oferecidos pela profissional dentista
+ - Sobre: Apresenta uma imagem da profissional ao lado de um texto exibindo sua trajetória profissional
+ - StatusBar: Apresenta dados quantitativos sobre a profissional
+ - Depoimentos: apresenta um carrossel de depoimentos de alguns pacientes sobre o atendimento oferecido
+ - Footer: Apresenta um formulário para contato ao lado de um iframe exibindo a localização do consultório no Google Maps e informações de contato (endereço, telefone, WhatsApp, etc.).
+
+O site também contará com páginas em que será possível acessar mais informações sobre uma especialidade oferecida por meio da rota `/especialidade/[id]` (Ainda em desenvolvimento)
+Os componentes foram escritos em arquivos `.jsx` e guardados na pasta `/components`. Os estilos CSS aplicados nesses componentes estão definidos dentro da pasta `/styles`, com um arquivo CSS para cada componente, além do `global.css` que aplica estilos em escopo global.
+
+### Header
+A estrutura do Header é definida dentro da tag <header>, que possui a classe dark-background para aplicar uma cor de fundo azul escuro. Dentro dele, temos:
+ - Um componente `<Image/>` que contém a imagem do logotipo da clínica.
+ - Uma tag `<nav>` que agrupa os links de navegação.
+ - Uma lista não ordenada (`<ul>`) onde cada item (`<li>`) contém um link (`<Link/>`). Esses links direcionam o usuário para as seções correspondentes na mesma página (ex: href="#especialidades").
+
+O CSS é responsável por posicionar o logotipo e os links de navegação, geralmente usando display: flex no `<header>`. A classe `.dark-background` aplica um fundo escuro, e outras regras definem as cores e o estilo dos links, garantindo que o cabeçalho seja visualmente coeso e funcional.
+
+### HomeImg
+A estrutura é minimalista: `<section id="inicio">`. Embora esteja vazia no HTML, ela serve como um contêiner que será totalmente estilizado pelo CSS.
+O seletor #inicio no CSS é usado para aplicar um estilo visual marcante. Geralmente, isso inclui:
+ - `background-image`: Uma imagem de alta qualidade do consultório é definida como plano de fundo.
+ - `height`: Uma altura significativa de 70vh para que o componente ocupe a maior parte da tela inicial.
+ - `background-size`: cover: Garante que a imagem de fundo cubra toda a área do componente sem distorção.
+
+### Especialidades
+O componente especialidades exibe os serviços numa lista de boxes para cada serviço oferecido em que há uma imagem demonstrativa e um texto explicativo, que aparece quando o usuário passa o mouse por cima. As informações de nome, descrição da e caminho para a imagem ilustrativa de cada especialidade foram armazenadas no arquivo `dados.json` e são obtidas através da chamada de API dentro do `useEffect()`. A rota para acessar as informações de todas as especialidades é `/api/especialidades`. Os dados de todas as especialidades são guardados dentro da variável `dados` definida dentro do `useState()`. Dentro da tag `<ul>`, é inserido um código javascript que itera sobre a lista especialidades através de `dados.map()` para renderizar os boxes com as especialidades. Para cada especialidade, cria um elemento de lista (`<li>`) com o HTML correspondente (imagem, nome e descrição).
+
+O CSS estiliza a aparência dos cards de especialidades. Regras para #especialidades ul usam display: flex e flex-wrap: wrap para organizar os itens em uma grade responsiva. Em cada item (`<li>`) da lista, é colocada uma tag `<figure>` contendo uma imagem ilustrativa (`<img>`) e um `<figcaption>` que possui o título e a descrição da especialidade ofertada. Os cards foram estilizados para que o usuário, ao passar o mouse por cima de uma figura, a descrição da respectiva espacialidade apareça.
+
+### Sobre
+O componente `<section id="sobre">` contém um `<article class="sobre-container">` que organiza o conteúdo em duas colunas:
+ - Uma tag `<aside>` para exibir a foto e o nome da dentista.
+ - Um parágrafo (`<p>`) com o texto descritivo sobre a profissional.
+
+A classe `.sobre-container` usa `display: flex` para criar o layout de duas colunas. O CSS também estiliza a imagem (`.sobre-figura img`), a legenda (`figcaption`) e o texto, garantindo uma leitura agradável e uma apresentação profissional. A classe `.blue-background` define uma cor azul claro como cor de fundo do componente.
+
+### Status Bar
+A status bar exibe numa lista não ordenada `<ul>` os dados quantitativos como: número de anos atendendo, quantidade de pacientes atendidos, quantidade de certificações e número de procedimentos realizados.
+O seletor `#status-bar ul` usa `display: flex` para alinhar as estatísticas horizontalmente no Desktop e verticalmente em dispositivos mobile. O CSS define a cor de fundo, a tipografia dos números (`.numero`) e dos textos (`.texto`), criando um forte contraste visual que chama a atenção para os dados, com números em branco num fundo azul escuro. Os depoimentos são exibidos dentro de uma tag `<ul>` como boxes num carrossel (ainda não aplicado). A lista é renderizada dinamicamente pelo Javascript, já que as informações sobre cada um deles (texto, autor e avaliação) estão guardados no arquivo dados.json. Sendo assim, os dados são obtidos através da chamada de API dentro do `useEffect()`. A rota para acessar as informações de todos os depoimentos é `/api/depoimentos`. Os dados dos depoimentos são guardados dentro da variável `dados` definida dentro do `useState()`. Dentro da tag `<ul>`, é inserido um código javascript que itera sobre a lista especialidades através de `dados.map()` para renderizar os boxes com os depoimentos. Para cada depoimento, cria-se um elemento de lista (`<li>`) com o HTML correspondente (texto, autor e avaliação).
+
+O CSS estiliza a aparência dos boxes (`#depoimentos ul li e .dark-background`), como tamanho, cor de fundo e preenchimento. Já as Media Queries ajustam o tamanho dos boxes.
+
+### Footer
+O formulário do rodapé é envolvido pela tag `<form>`, em que cada entrada é representada por um `<input>` (textos curtos), `<textarea>` (textos longos) `<select>` (lista de opções). Cada uma das entradas, assim como suas `<labels>` (explicação do input) é envolvida num `<fieldset>` e no fim do formulário há o botão de submit. Ao lado do formulário é possível encontrar o iframe que exibe a localização do consultório no Google Maps por meio da tag `<iframe>`. Do lado direito, há uma lista das informações de contato envolvidas pela tag `<address>`.
+
+O seletor `.contato-container` usa `display: flex` para organizar o formulário, o mapa e as informações lado a lado em telas grandes. Em telas pequenas, uma Media Query altera `flex-direction` para `column`, empilhando os elementos verticalmente para melhor visualização em dispositivos móveis. O CSS também estiliza todos os elementos do formulário e as informações de contato.
+
+
+
+
+
+
+
+
+
 ## Imagens do Protótipo
 ### Versão mobile
 A versão mobile do protótipo foi feita para a tela de um IPhone SE. A intenção é garantir que o conteúdo consiga caber até mesmo dentro de telas de smartphone com largura pequena (neste caso 320px)
