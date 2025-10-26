@@ -1,5 +1,5 @@
 'use client';
-import "../../styles/depoimentos.css"
+import "../../styles/depoimentos.module.css"
 import { useState, useEffect } from "react";
 
 export default function Depoimentos() {

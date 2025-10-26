@@ -1,4 +1,4 @@
-import '../../styles/statusBar.css';
+import '../../styles/statusBar.module.css';
 
 export default function StatusBar() {
   return (

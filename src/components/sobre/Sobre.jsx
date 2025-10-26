@@ -1,5 +1,5 @@
 'use client';
-import '../../styles/sobre.css';
+import '../../styles/sobre.module.css';
 import Image from 'next/image';
 
 export default function Sobre() {
