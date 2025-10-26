@@ -5,11 +5,11 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 export default function Footer() {
   return (
     <footer className={styles.contato}>
-      <section className="contato-container">
-        <form id="form" className="formulario" data-parsley-validate>
+      <section>
+        <form id="form" data-parsley-validate>
           <h4>Formulário de Contato</h4>
 
-          <fieldset className="input-field">
+          <fieldset>
             <label htmlFor="nome">Nome</label>
             <input
               type="text"
@@ -20,7 +20,7 @@ export default function Footer() {
             />
           </fieldset>
 
-          <fieldset className="input-field">
+          <fieldset>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -32,7 +32,7 @@ export default function Footer() {
             />
           </fieldset>
 
-          <fieldset className="input-field">
+          <fieldset>
             <label htmlFor="assunto">Assunto</label>
             <input
               type="text"
@@ -43,7 +43,7 @@ export default function Footer() {
             />
           </fieldset>
 
-          <fieldset className="input-field">
+          <fieldset>
             <label htmlFor="especialidade">Selecione uma especialidade</label>
             <select
               id="especialidade"
@@ -61,7 +61,7 @@ export default function Footer() {
             </select>
           </fieldset>
 
-          <fieldset className="input-field">
+          <fieldset>
             <label htmlFor="modalidade">Modalidade</label>
             <select
               id="modalidade"
@@ -75,7 +75,7 @@ export default function Footer() {
             </select>
           </fieldset>
 
-          <fieldset className="input-field">
+          <fieldset>
             <label htmlFor="mensagem">Mensagem</label>
             <textarea
               id="mensagem"
