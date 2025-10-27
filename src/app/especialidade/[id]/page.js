@@ -29,10 +29,12 @@ export default function Home() {
     fetchData();
   }, [id, router]);
 
+  const titleStyle = { marginTop: '5vh', marginBottom: '5vh' };
+
   return (
     <div>
       <Header />
-      <h1 style={{ marginBottom: '8vh' }}>{dados.nome}</h1>
+      <h1 style={titleStyle}>{dados.nome}</h1>
       <HomeImg imagem={`/assets/images/especialidade_page/${dados.imagem}`} />
       <Description texto={dados.descricao} />
       <Footer />
