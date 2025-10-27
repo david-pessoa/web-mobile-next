@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Sobre() {
   return (
-    <section className={`${styles.sobre} blue-background`}>
+    <section id="sobre" className={`${styles.sobre} blue-background`}>
       <h2>Sobre</h2>
       <article className={styles.sobreContainer}>
         <aside className={styles.sobreColuna}>

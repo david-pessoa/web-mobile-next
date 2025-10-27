@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className={styles.contato}>
+    <footer id="contato" className={styles.contato}>
       <section>
         <form id="form" data-parsley-validate>
           <h4>Formulário de Contato</h4>

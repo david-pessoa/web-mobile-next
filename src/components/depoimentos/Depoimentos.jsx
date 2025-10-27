@@ -29,7 +29,7 @@ export default function Depoimentos() {
   }, []);
 
   return (
-    <section className={`${styles.depoimentos} blue-background`}>
+    <section id="depoimentos" className={`${styles.depoimentos} blue-background`}>
       <h2>Depoimentos</h2>
       <article className="swiper">
         <Swiper

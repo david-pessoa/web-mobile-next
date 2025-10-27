@@ -17,7 +17,7 @@ export default function Especialidades() {
   }, []);
 
   return (
-    <section className={`${styles.especialidades} white-background`}>
+    <section id="especialidades" className={`${styles.especialidades} white-background`}>
       <h2>Especialidades</h2>
       <ul id="listaEspecialidades">
         {dados?.map(especialidade => (
