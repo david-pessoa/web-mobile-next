@@ -54,31 +54,37 @@
 
   "especialidades": [
     {
+      "id": 1,
       "nome": "Estética",
       "texto": "Procedimentos para melhorar a aparência dos dentes e do sorriso, como clareamento dental, face e outros tratamentos estéticos que valorizam o visual e a harmonia do sorriso.",
       "imagem": "estetica.png"
     },
     {
+      "id": 2,
       "nome": "Dentística",
       "texto": "Restauração e reparo dos dentes, corrigindo problemas como cáries e desgastes, utilizando técnicas e materiais avançados para restaurar a função e a estética dental.",
       "imagem": "dentistica.png"
     },
     {
+      "id": 3,
       "nome": "Periodontia",
       "texto": "Prevenção, diagnóstico e tratamento das doenças das gengivas e estruturas de suporte dos dentes, promovendo a saúde periodontal e evitando a perda dentária.",
       "imagem": "periodontia.png"
     },
     {
+      "id": 4,
       "nome": "Endodontia",
       "texto": "Cuida do tratamento do canal radicular, visando salvar dentes severamente danificados ou infeccionados através de procedimentos especializados para aliviar dor e preservar a dentição.",
       "imagem": "endodontia.png"
     },
     {
+      "id": 5,
       "nome": "Ortodontia",
       "texto": "Corrige problemas de alinhamento dos dentes e da mordida utilizando aparelhos ortodônticos, melhorando a estética do sorriso e a função oral.",
       "imagem": "ortodontia.png"
     },
     {
+      "id": 6,
       "nome": "Implantodontia",
       "texto": "Realiza a colocação de implantes dentários para substituir dentes ausentes, proporcionando uma solução durável e natural para restaurar a função e a estética dental.",
       "imagem": "implantodontia.png"
