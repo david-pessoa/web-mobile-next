@@ -2,6 +2,11 @@
 import { useParams } from 'next/navigation'; // Ou `react-router` para `pages` router
 import { useEffect, useState } from 'react';
 
+import Header from '@/components/header/Header';
+import HomeImg from '@/components/homeImg/HomeImg';
+import Footer from '@/components/footer/Footer';
+import Description from '@/components/description/Description';
+
 export default function Home() {
   const params = useParams();
   const { id } = params;
@@ -10,16 +15,21 @@ export default function Home() {
   useEffect(() => {
     async function fetchData() {
       const res = await fetch('/api/especialidades');
-      const especialidades = await res.json();
-      setDados(especialidades);
+      const lista_especialidades = await res.json();
+      const especialidade = lista_especialidades[id - 1];
+      document.title = `Consultório Odontológico | ${especialidade.nome}`;
+      setDados(especialidade);
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   return (
-    <div className={styles.page}>
-      <h1>Especialidade com ID: {id}</h1>
-      <p>{dados[0]?.nome}</p>
+    <div>
+      <Header />
+      <h1>{dados.nome}</h1>
+      <HomeImg imagem={`/assets/images/especialidade_page/${dados.imagem}`} />
+      <Description texto={dados.descricao}/>
+      <Footer />
     </div>
   );
 }

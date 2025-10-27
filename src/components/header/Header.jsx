@@ -9,27 +9,27 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link href="#inicio">
+            <Link href="/#inicio">
               <h5>Início</h5>
             </Link>
           </li>
           <li>
-            <Link href="#especialidades">
+            <Link href="/#especialidades">
               <h5>Especialidades</h5>
             </Link>
           </li>
           <li>
-            <Link href="#sobre">
+            <Link href="/#sobre">
               <h5>Sobre</h5>
             </Link>
           </li>
           <li>
-            <Link href="#depoimentos">
+            <Link href="/#depoimentos">
               <h5>Depoimentos</h5>
             </Link>
           </li>
           <li>
-            <Link href="#contato">
+            <Link href="/#contato">
               <h5>Contato</h5>
             </Link>
           </li>

@@ -57,7 +57,8 @@
       "id": 1,
       "nome": "Estética",
       "texto": "Procedimentos para melhorar a aparência dos dentes e do sorriso, como clareamento dental, face e outros tratamentos estéticos que valorizam o visual e a harmonia do sorriso.",
-      "imagem": "estetica.png"
+      "imagem": "estetica.png",
+      "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sem viverra, vulputate augue quis, interdum urna. Etiam pharetra ex non auctor tincidunt. Etiam ornare leo in rutrum elementum. Curabitur in urna dolor. Sed feugiat ullamcorper massa in egestas. Sed consequat, sapien quis ornare porta, diam orci interdum diam, eget vehicula ipsum nulla vel risus. Phasellus efficitur hendrerit nisl, nec ultrices augue mollis at. Nunc sagittis interdum urna vitae fringilla. Sed iaculis in urna efficitur mattis. Vivamus eget posuere nibh, id elementum eros. Mauris bibendum erat ut eros faucibus, nec elementum velit tincidunt. Morbi ut nunc mauris. Duis feugiat ultrices aliquet. Maecenas sed ullamcorper sapien. Etiam sit amet feugiat magna. In hac habitasse platea dictumst. Vivamus congue justo nec euismod scelerisque. Duis pretium iaculis erat."
     },
     {
       "id": 2,

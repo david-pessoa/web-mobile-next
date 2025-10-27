@@ -5,7 +5,7 @@ import FigureCaption from './FigureCaption';
 export default function Box({ dados }) {
   return (
     <li>
-      <Link href={`/especialidades/${dados.id}`}>
+      <Link href={`/especialidade/${dados.id}`}>
         <figure>
           <Image
             src={`/assets/images/especialidades/${dados.imagem}`}

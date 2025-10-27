@@ -7,14 +7,14 @@ import Depoimentos from '@/components/depoimentos/Depoimentos';
 import Footer from '@/components/footer/Footer';
 
 export const metadata = {
-  title: 'Consultório Odontológico',
+  title: 'Consultório Odontológico | Home',
 };
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <HomeImg />
+      <HomeImg imagem={'/assets/images/carrossel_consultorio/exterior.png'} />
       <Especialidades />
       <Sobre />
       <StatusBar />
