@@ -13,11 +13,11 @@
   background-color: #fff;
 }
 
-.depoimentos .swiper-button-next {
+.depoimentos .swiper-button-next::after {
   color: #fff;
 }
 
-.depoimentos .swiper-slide {
+.swiperSlider {
   width: 20.295rem;
   height: 19.438rem;
   border-radius: 7px;

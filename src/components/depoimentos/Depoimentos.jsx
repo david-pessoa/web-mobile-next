@@ -9,11 +9,12 @@ import { faStar as faRegularStar } from '@fortawesome/free-regular-svg-icons';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import Slide from './Slide';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 export default function Depoimentos() {
   const [dados, setDados] = useState(null);
@@ -37,26 +38,14 @@ export default function Depoimentos() {
           spaceBetween={50}
           slidesPerView={3}
           navigation
+          loop={true}
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
           onSwiper={swiper => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
           {dados?.map((depoimento, i) => (
-            <SwiperSlide key={i} className="dark-background swiper-slidey">
-              <span className={styles.quotes}>“</span>
-              <blockquote>{depoimento.texto}</blockquote>
-              <span className={`${styles.quotes} ${styles.quotesBelow}`}>”</span>
-              <cite>{depoimento.pessoa}</cite>
-              <span className={styles.stars}>
-                {Array.from({ length: 5 }).map((_, index) =>
-                  index + 1 > depoimento.estrelas ? (
-                    <FontAwesomeIcon key={index} icon={faRegularStar} />
-                  ) : (
-                    <FontAwesomeIcon key={index} icon={faSolidStar} />
-                  )
-                )}
-              </span>
+            <SwiperSlide key={i}>
+              <Slide dados={depoimento}/>
             </SwiperSlide>
           ))}
         </Swiper>
