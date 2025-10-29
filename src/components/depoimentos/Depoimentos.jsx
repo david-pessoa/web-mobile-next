@@ -1,9 +1,6 @@
 'use client';
 import styles from '../../styles/depoimentos.module.css';
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as faSolidStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faRegularStar } from '@fortawesome/free-regular-svg-icons';
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -15,6 +12,7 @@ import Slide from './Slide';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import '../../styles/swiper.css';
 
 export default function Depoimentos() {
   const [dados, setDados] = useState(null);
@@ -45,7 +43,7 @@ export default function Depoimentos() {
         >
           {dados?.map((depoimento, i) => (
             <SwiperSlide key={i}>
-              <Slide dados={depoimento}/>
+              <Slide dados={depoimento} />
             </SwiperSlide>
           ))}
         </Swiper>

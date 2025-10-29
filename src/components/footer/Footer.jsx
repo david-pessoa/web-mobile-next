@@ -3,11 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 export default function Footer() {
-  const iconStyle = {
-    color: '#08a6c5',
-    fontSize: '2em',
-  };
-
   return (
     <footer id="contato" className={styles.contato}>
       <section>
@@ -105,19 +100,19 @@ export default function Footer() {
           <h4>Fale Conosco</h4>
           <ul>
             <li>
-              <FontAwesomeIcon icon={faPhone} style={iconStyle} />
+              <FontAwesomeIcon icon={faPhone} className={styles.icon} />
               <h6>(11) 98839-8134</h6>
             </li>
             <li>
-              <FontAwesomeIcon icon={faWhatsapp} style={iconStyle} />
+              <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
               <h6>(11) 98839-8134</h6>
             </li>
             <li>
-              <FontAwesomeIcon icon={faEnvelope} style={iconStyle} />
+              <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
               <h6>consultoria.alzira@gmail.com</h6>
             </li>
             <li>
-              <FontAwesomeIcon icon={faLocationDot} style={iconStyle} />
+              <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
               <h6>Rua Chemin Del Pra, nº 172, São Paulo, Santana</h6>
             </li>
           </ul>
