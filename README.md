@@ -83,7 +83,7 @@ Para rodar o projeto na sua máquina é necessário possuir instalados:
 
 ### 1) Clone o projeto no GitHub
 ```
-https://github.com/david-pessoa/web-mobile-next.git
+git clone https://github.com/david-pessoa/web-mobile-next.git
 ```
 
 ### 2) Entre no diretório raiz do projeto (/web-mobile-next) e instale as dependências
