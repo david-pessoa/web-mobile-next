@@ -111,6 +111,48 @@ O site também contará com páginas em que será possível acessar mais informa
 Os componentes foram escritos em arquivos `.jsx` e guardados na pasta `/components`. Os estilos CSS aplicados nesses componentes estão definidos dentro da pasta `/styles`, com um arquivo CSS para cada componente, além do `global.css` que aplica estilos em escopo global.
 
 ### Header
+
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from '../../styles/header.module.css';
+
+export default function Header() {
+  return (
+    <header className={`${styles.header} dark-background`}>
+      <Image src="/assets/images/logo.png" alt="Logo do site" height={1649} width={1631} />
+      <nav>
+        <ul>
+          <li>
+            <Link href="/#inicio">
+              <h5>Início</h5>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#especialidades">
+              <h5>Especialidades</h5>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#sobre">
+              <h5>Sobre</h5>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#depoimentos">
+              <h5>Depoimentos</h5>
+            </Link>
+          </li>
+          <li>
+            <Link href="/#contato">
+              <h5>Contato</h5>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
 A estrutura do Header é definida dentro da tag <header>, que possui a classe dark-background para aplicar uma cor de fundo azul escuro. Dentro dele, temos:
  - Um componente `<Image/>` que contém a imagem do logotipo da clínica.
  - Uma tag `<nav>` que agrupa os links de navegação.
