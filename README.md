@@ -435,6 +435,12 @@ O formulário do rodapé é envolvido pela tag `<form>`, em que cada entrada é 
 
 O seletor `.contato-container` usa `display: flex` para organizar o formulário, o mapa e as informações lado a lado em telas grandes. Em telas pequenas, uma Media Query altera `flex-direction` para `column`, empilhando os elementos verticalmente para melhor visualização em dispositivos móveis. O CSS também estiliza todos os elementos do formulário e as informações de contato.
 
+## Caráter Extensionista
+
+Muitas pessoas precisam de atendimento dentário, mas não sabem onde procurar. Nosso projeto cria um site profissional que aumenta a visibilidade do consultório. Isso significa que pessoas com dor de dente conseguem encontrar ajuda mais rápido. Outro que está com dor severa pode acessar o site e ver as especialidades disponíveis e marcar uma consulta urgente em minutos.
+Nosso site também mostra ao paciente que tem dúvidas sobre o atendimento as especialidades e as avaliações sobre o consultório.
+Por fim, o site apresenta uma interface simples, e mais limpa, para que o paciente não tenha dificuldades em navegar pelo site para marcar uma consulta, por exemplo.
+
 
 
 
