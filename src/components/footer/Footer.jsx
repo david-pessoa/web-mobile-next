@@ -101,19 +101,19 @@ export default function Footer() {
           <ul>
             <li>
               <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-              <h6>(11) 98839-8134</h6>
+              <h6>(99) 99999-9999</h6>
             </li>
             <li>
               <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
-              <h6>(11) 98839-8134</h6>
+              <h6>(99) 99999-9999</h6>
             </li>
             <li>
               <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-              <h6>consultoria.alzira@gmail.com</h6>
+              <h6>consultorio.@email.com</h6>
             </li>
             <li>
               <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
-              <h6>Rua Chemin Del Pra, nº 172, São Paulo, Santana</h6>
+              <h6>Rua de Exemplo, nº 999, São Paulo</h6>
             </li>
           </ul>
         </address>
