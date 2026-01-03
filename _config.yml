@@ -1,8 +1,2 @@
 exclude:
-  - node_modules
-  - src
-  - app
-  - components
   - README.md
-  - package.json
-  - package-lock.json
