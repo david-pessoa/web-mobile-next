@@ -1,6 +1,5 @@
 'use client';
 import styles from '../../styles/depoimentos.module.css';
-import { useState, useEffect } from 'react';
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -14,17 +13,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import '../../styles/swiper.css';
 
-export default function Depoimentos() {
-  const [dados, setDados] = useState(null);
+//Importa dados
+import data from '@/app/api/dados.json'
 
-  useEffect(() => {
-    async function getDepoimentos() {
-      const res = await fetch('/api/depoimentos');
-      const depoimentos = await res.json();
-      setDados(depoimentos);
-    }
-    getDepoimentos();
-  }, []);
+export default function Depoimentos() {
+  const dados = data.depoimentos
 
   return (
     <section id="depoimentos" className={`${styles.depoimentos} blue-background`}>

@@ -1,20 +1,12 @@
-'use client';
 import styles from '../../styles/especialidades.module.css';
-import { useEffect, useState } from 'react';
 
 import ImageCard from "./ImageCard"
 
-export default function Especialidades() {
-  const [dados, setDados] = useState(null);
+//Importa dados
+import data from '@/app/api/dados.json'
 
-  useEffect(() => {
-    async function getEspecialidades() {
-      const res = await fetch('/api/especialidades');
-      const especialidades = await res.json();
-      setDados(especialidades);
-    }
-    getEspecialidades();
-  }, []);
+export default function Especialidades() {
+ const dados = data.especialidades
 
   return (
     <section id="especialidades" className={`${styles.especialidades} white-background`}>

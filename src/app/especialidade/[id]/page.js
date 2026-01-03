@@ -1,33 +1,24 @@
-'use client';
-import { useRouter, useParams } from 'next/navigation'; // Ou `react-router` para `pages` router
-import { useEffect, useState } from 'react';
-
 import Header from '@/components/header/Header';
 import HomeImg from '@/components/homeImg/HomeImg';
 import Footer from '@/components/footer/Footer';
 import Description from '@/components/description/Description';
+import data from '@/app/api/dados.json';
+import { notFound } from 'next/navigation';
 
-export default function Home() {
-  const params = useParams();
-  const { id } = params;
-  const [dados, setDados] = useState([]);
-  const router = useRouter();
+export function generateStaticParams() {
+  return data.especialidades.map((_, index) => ({
+    id: String(index + 1),
+  }));
+}
 
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch('/api/especialidades');
-      const lista_especialidades = await res.json();
-      const especialidade = lista_especialidades[id - 1];
-      console.log(especialidade);
+export default async function EspecialidadePage({ params }) {
+  const { id } = await params; // 👈 AQUI está a correção
+  const numericId = Number(id);
+  const dados = data.especialidades[numericId - 1];
 
-      // Direciona para a página 404 se o id não existir
-      if (!especialidade) router.push('/404');
-
-      document.title = `Consultório Odontológico | ${especialidade.nome}`;
-      setDados(especialidade);
-    }
-    fetchData();
-  }, [id, router]);
+  if (!dados) {
+    notFound();
+  }
 
   const titleStyle = { marginTop: '5vh', marginBottom: '5vh' };
 
