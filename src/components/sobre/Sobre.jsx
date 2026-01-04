@@ -9,9 +9,9 @@ export default function Sobre() {
         <aside className={styles.sobreColuna}>
           <h4>A dentista</h4>
           <figure className={styles.sobreFigura}>
-            <Image src="/assets/images/dentista.jpeg" alt="A dentista" width={2153} height={3390} />
+            <Image src="/assets/images/dentista.jpg" alt="A dentista" width={2153} height={3390} />
             <figcaption>
-              <h6 className="medium">Dra. Jéssica Pereira</h6>
+              <h6 className="medium">Dra. Alzira Varão Lima</h6>
               <h6>Periodontista formada pela USP</h6>
             </figcaption>
           </figure>

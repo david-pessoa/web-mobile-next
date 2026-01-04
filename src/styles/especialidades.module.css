@@ -66,10 +66,18 @@
     max-width: 18rem;
   }
 
+  .especialidades figure img {
+   max-width: 18rem;
+   max-height: 18rem;
+  } 
+
   .especialidades figure figcaption p {
     font-size: 0.938rem;
   }
 
+  .especialidades figure figcaption h5 {
+    /* font-size: ; */
+  }
   .especialidades figure:hover figcaption h5 {
     margin-bottom: 0.4rem;
   }

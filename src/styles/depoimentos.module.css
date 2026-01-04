@@ -21,6 +21,7 @@
   height: 19.438rem;
   border-radius: 7px;
   margin-bottom: 7vh;
+  margin-left: 2vw;
   list-style: none;
   padding-left: 1.438rem;
   padding-right: 1.438rem;
@@ -65,8 +66,31 @@
   color: #ffe14b;
 }
 
-@media (max-width: 600px) and (min-width: 320px) {
-  .depoimentos ul li {
+@media (max-width: 1600px) {
+  .swiperSlider {
+    margin-left: 4vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .swiperSlider {
+    margin-left: 8vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .swiperSlider{
+    margin-left: 4vw;
+  }
+}
+@media (max-width: 600px) {
+  .swiperSlider{
+    margin: 0 auto 7vh auto;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 320px) {
+  .swiperSlider {
     width: 15rem;
     height: 16rem;
     padding-left: 1rem;
