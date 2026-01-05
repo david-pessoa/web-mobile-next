@@ -1,5 +1,5 @@
 import Header from '@/components/header/Header';
-import HomeImg from '@/components/homeImg/HomeImg';
+import Carrousel from '@/components/homeImg/Carrousel';
 import Especialidades from '@/components/especialidades/Especialidades';
 import Sobre from '@/components/sobre/Sobre';
 import StatusBar from '@/components/statusBar/StatusBar';
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <HomeImg imagem={'/assets/images/carrossel_consultorio/exterior.png'} />
+      <Carrousel/>
       <Especialidades />
       <Sobre />
       <StatusBar />
