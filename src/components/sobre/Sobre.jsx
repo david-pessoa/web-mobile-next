@@ -17,18 +17,25 @@ export default function Sobre() {
           </figure>
         </aside>
 
-        <p className={styles.sobreColuna}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque viverra sem viverra,
-          vulputate augue quis, interdum urna. Etiam pharetra ex non auctor tincidunt. Etiam ornare
-          leo in rutrum elementum. Curabitur in urna dolor. Sed feugiat ullamcorper massa in
-          egestas. Sed consequat, sapien quis ornare porta, diam orci interdum diam, eget vehicula
-          ipsum nulla vel risus. Phasellus efficitur hendrerit nisl, nec ultrices augue mollis at.
-          Nunc sagittis interdum urna vitae fringilla. Sed iaculis in urna efficitur mattis. Vivamus
-          eget posuere nibh, id elementum eros. Mauris bibendum erat ut eros faucibus, nec elementum
-          velit tincidunt. Morbi ut nunc mauris. Duis feugiat ultrices aliquet. Maecenas sed
-          ullamcorper sapien. Etiam sit amet feugiat magna. In hac habitasse platea dictumst.
-          Vivamus congue justo nec euismod scelerisque. Duis pretium iaculis erat.
+        <div className={styles.sobreColuna}>
+        <p>
+          A Dra. Alzira é cirurgiã-dentista especialista em Periodontia, formada pela Universidade
+          de São Paulo (USP), uma das instituições mais renomadas da América Latina na área da
+          saúde. Com sólida formação acadêmica e ampla experiência clínica, dedica-se ao
+          diagnóstico, prevenção e tratamento das doenças que afetam a gengiva e os tecidos de
+          suporte dos dentes.
         </p>
+        <p>
+          Seu trabalho é pautado pela excelência técnica, pelo uso de protocolos modernos e por um
+          atendimento humanizado, sempre focado no bem-estar e na segurança do paciente. A Dra.
+          Alzira acredita que a saúde bucal é parte essencial da saúde geral e atua de forma
+          cuidadosa para promover sorrisos saudáveis e duradouros.
+        </p>
+        <p >
+          Atenta às inovações da odontologia, está em constante atualização, oferecendo tratamentos
+          eficazes, personalizados e baseados em evidências científicas.
+        </p>
+        </div>
       </article>
     </section>
   );
