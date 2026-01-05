@@ -7,7 +7,6 @@ export default function Sobre() {
       <h2>Sobre</h2>
       <article className={styles.sobreContainer}>
         <aside className={styles.sobreColuna}>
-          <h4>A dentista</h4>
           <figure className={styles.sobreFigura}>
             <Image src="/assets/images/dentista.jpg" alt="A dentista" width={2153} height={3390} />
             <figcaption>
