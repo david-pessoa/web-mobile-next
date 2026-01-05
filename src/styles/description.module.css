@@ -1,6 +1,9 @@
-.description p {
-    text-align: justify;
+.description aside {
     width: 70%;
+}
+.description aside  p{
+    text-align: justify;
+    margin-bottom: 1rem;
 }
 
 .description {

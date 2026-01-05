@@ -12,7 +12,7 @@ export function generateStaticParams() {
 }
 
 export default async function EspecialidadePage({ params }) {
-  const { id } = await params; // 👈 AQUI está a correção
+  const { id } = await params;
   const numericId = Number(id);
   const dados = data.especialidades[numericId - 1];
 
