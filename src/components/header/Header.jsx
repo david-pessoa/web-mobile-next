@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import Link from 'next/link';
+import Navbar from './Navbar';
 import Image from 'next/image';
 import styles from '../../styles/header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,35 +23,7 @@ export default function Header() {
         <button className={styles.menuIcon} onClick={() => setMobileMenuOpen(true)}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <nav className={styles.pcNav}>
-          <ul>
-            <li>
-              <Link href="/#inicio">
-                <h5>Início</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#especialidades">
-                <h5>Especialidades</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#sobre">
-                <h5>Sobre</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#depoimentos">
-                <h5>Depoimentos</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#contato">
-                <h5>Contato</h5>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar type="computer" />
         <Image
           src="/assets/images/logo.png"
           alt="Logo do site"
@@ -76,35 +48,7 @@ export default function Header() {
             <FontAwesomeIcon icon={faXmark} />
           </button>
         </div>
-        <nav className={styles.mobileNav}>
-          <ul>
-            <li>
-              <Link href="/#inicio">
-                <h5>Início</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#especialidades">
-                <h5>Especialidades</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#sobre">
-                <h5>Sobre</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#depoimentos">
-                <h5>Depoimentos</h5>
-              </Link>
-            </li>
-            <li>
-              <Link href="/#contato">
-                <h5>Contato</h5>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar type="mobile" />
       </div>
     </>
   );
