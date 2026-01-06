@@ -1,11 +1,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../../styles/header.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
   return (
     <header className={`${styles.header} dark-background`}>
-      <Image src="/assets/images/logo.png" alt="Logo do site" height={1649} width={1631} />
+      <Image
+        src="/assets/images/logo.png"
+        alt="Logo do site"
+        height={1649}
+        width={1631}
+        className={styles.pcLogo}
+      />
+      <button className={styles.menuIcon}>
+        <FontAwesomeIcon icon={faBars}  />
+      </button>
       <nav>
         <ul>
           <li>
@@ -35,6 +46,13 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      <Image
+        src="/assets/images/logo.png"
+        alt="Logo do site"
+        height={1649}
+        width={1631}
+        className={styles.mobileLogo}
+      />
     </header>
   );
 }

@@ -1,6 +1,13 @@
-.header img {
+.pcLogo {
   height: 5rem;
   width: auto;
+}
+.mobileLogo {
+  display: none;
+}
+
+.menuIcon {
+  display: none;
 }
 
 .header {
@@ -22,7 +29,7 @@
     padding: 0.8em 1em;
   }
 
-  .header img {
+  .pcLogo {
     height: 3rem;
   }
   .header nav ul li a h5 {
@@ -31,46 +38,29 @@
 }
 
 @media (max-width: 600px) {
-  .header img {
+  .pcLogo {
+    display: none;
+  }
+
+  .menuIcon {
+    display: flex;
     height: 2.5rem;
-  }
-  .header nav ul li a h5 {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 450px) {
-  .header {
-    padding: 0.8em 0.2em;
+    font-size: 1.5rem;
+    background-color: var(--dark-blue);
+    border: none;
   }
 
-  .header nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    grid-template-rows: auto auto; /* duas linhas */
-    gap: 0.4em;
-    width: 100%;
-    text-align: center;
+  .menuIcon svg{
+    color: #FFF;
+    height: 100%;
   }
 
-  .header nav ul li a h5 {
-    font-size: 1rem;
+  .header nav {
+    display: none;
   }
-
-  .header nav ul li:nth-child(4),
-  .header nav ul li:nth-child(5) {
-    grid-column: span 1; /* cada item ocupa 1 coluna */
-  }
-
-  .header nav ul li:nth-child(4) {
-    grid-column: 1 / 2; /* vai para a esquerda */
-  }
-
-  .header nav ul li:nth-child(5) {
-    grid-column: 2 / 3; /* vai para o meio */
-  }
-
-  .header img {
-    height: 1.875rem;
+  .mobileLogo {
+    display: flex;
+    width: 2.5rem;
+    height: auto;
   }
 }
