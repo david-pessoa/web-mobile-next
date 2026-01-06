@@ -10,6 +10,10 @@
   display: none;
 }
 
+.mobileMenu{
+  display: none;
+}
+
 .header {
   padding: 0.8em 2em;
   display: flex;
@@ -32,7 +36,7 @@
   .pcLogo {
     height: 3rem;
   }
-  .header nav ul li a h5 {
+  .pcNav ul li a h5 {
     font-size: 1.15rem;
   }
 }
@@ -46,21 +50,65 @@
     display: flex;
     height: 2.5rem;
     font-size: 1.5rem;
-    background-color: var(--dark-blue);
+    background-color: transparent;
     border: none;
   }
 
-  .menuIcon svg{
-    color: #FFF;
+  .menuIcon svg {
+    color: #fff;
     height: 100%;
   }
+  .xmark svg {
+    margin-left: -4rem;
+  }
 
-  .header nav {
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--blue);
+    width: 50vw;
+    height: 70vh;
+    border-radius: 0 0 7px 0;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobileMenu.open {
+    transform: translateX(0);
+  }
+
+  .mobileNav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 5vh;
+  }
+
+  .mobileNav ul li:active {
+    background-color: transparent;
+  }
+
+  .mobileNav ul li a h5 {
+    font-size: 1.3rem;
+  }
+
+  .mobileMenuTop {
+    display: flex;
+    margin: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pcNav {
     display: none;
   }
   .mobileLogo {
     display: flex;
     width: 2.5rem;
-    height: auto;
+    height: 2.5rem;
   }
 }

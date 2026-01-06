@@ -2,6 +2,11 @@
 .swiper-button-prev {
   color: #fff;
 }
+
+.inicio .swiper-pagination-bullet  {
+  opacity: .7;
+}
+
 .swiper-pagination-bullet-active {
   background-color: #fff;
 }
