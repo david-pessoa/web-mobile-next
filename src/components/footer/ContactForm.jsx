@@ -1,4 +1,21 @@
+'use client'
+
+import { useEffect } from 'react'
+import $ from 'jquery'
+// import 'parsleyjs'
+
 export default function ContactForm() {
+  useEffect(() => {
+    // expõe o jQuery globalmente (obrigatório pro Parsley)
+    window.$ = $
+    window.jQuery = $
+
+    // importa o parsley SOMENTE depois disso
+    import('parsleyjs').then(() => {
+      $('#form').parsley()
+    })
+  }, [])
+
   return (
     <form id="form" data-parsley-validate>
       <h4>Formulário de Contato</h4>
