@@ -69,7 +69,7 @@
     z-index: 10;
     background-color: var(--blue);
     width: 50vw;
-    height: 70vh;
+    padding: 0 1em 4em 1em;
     border-radius: 0 0 7px 0;
     top: 0;
     left: 0;
@@ -93,6 +93,7 @@
   }
 
   .mobileNav ul li a h5 {
+    font-weight: var(--bold);
     font-size: 1.3rem;
   }
 
