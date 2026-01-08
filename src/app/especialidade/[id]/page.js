@@ -24,6 +24,7 @@ export default async function EspecialidadePage({ params }) {
 
   return (
     <div>
+      <title>{ dados.nome }</title>
       <Header />
       <h1 style={titleStyle}>{dados.nome}</h1>
       <HomeImg imagem={`/assets/images/especialidade_page/${dados.imagem}`} />
