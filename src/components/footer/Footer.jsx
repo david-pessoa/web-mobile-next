@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 export default function Footer() {
   return (
     <footer id="contato" className={styles.contato}>
-      <section>
+      <div className={styles.box}>
         <ContactForm />
 
         <iframe
@@ -36,7 +36,7 @@ export default function Footer() {
             </li>
           </ul>
         </address>
-      </section>
+      </div>
     </footer>
   );
 }

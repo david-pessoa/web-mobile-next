@@ -15,7 +15,7 @@
 }
 
 /* container contato */
-.contato section {
+.box {
   display: flex;
   gap: 2rem;
   padding: 0 0.7rem;
@@ -139,7 +139,7 @@
 }
 
 @media (max-width: 900px) {
-  .contato section {
+  .box {
     flex-direction: column;
   }
 
@@ -159,7 +159,7 @@
 }
 
 @media (max-width: 450px) {
-  .contato section {
+  .box {
     flex-direction: column;
   }
   .contato form {
