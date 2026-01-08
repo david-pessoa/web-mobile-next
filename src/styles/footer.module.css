@@ -22,6 +22,35 @@
   align-items: center;
 }
 
+.sendEmailMessageBox {
+  background-color: #39ac56;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 10vw;
+  z-index: -2;
+  padding: 1em;
+  gap: 1.5em;
+}
+.sendEmailMessageBox.open {
+  transform: translateY(15vh);
+  z-index: 20;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.xmark {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 2em;
+}
+
+.sendEmailMessageBox h6 {
+  color: #fff;
+  font-weight: 400;
+}
+
 /* formulário */
 .contato form {
   background: #fff;
@@ -125,6 +154,11 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 1440px) {
+  .sendEmailMessageBox {
+    left: 4vw;
+  }
+}
 @media (max-width: 1200px) {
   .contato address ul li h6 {
     font-size: 0.85rem;
@@ -143,6 +177,10 @@
     flex-direction: column;
   }
 
+  .sendEmailMessageBox {
+    left: auto;
+  }
+
   .contato form {
     width: 85%;
   }
@@ -155,6 +193,18 @@
   .contato address {
     width: 100%;
     align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .sendEmailMessageBox {
+    padding: 0.7em;
+  }
+  .sendEmailMessageBox .xmark{
+    font-size: 1.5em;
+  }
+  .sendEmailMessageBox h6 {
+    font-size: 0.9rem;
   }
 }
 

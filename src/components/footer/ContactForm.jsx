@@ -17,14 +17,19 @@ export default function ContactForm() {
   const [modality, setModality] = useState('');
   const [message, setMessage] = useState('');
 
-  const [showSendEmailMessage, setShowSendEmailMessage] = useState(false)
+  const [showSendEmailMessage, setShowSendEmailMessage] = useState(false);
 
   function handleFormSubmit(e) {
     e.preventDefault();
 
-    // Call some API...
+    // Valida formulário
+    const form = $('#form').parsley();
+    if (!form.validate()) {
+      return;
+    }
 
-    setShowSendEmailMessage(true)
+    // Call some API...
+    setShowSendEmailMessage(true);
   }
 
   useEffect(() => {
@@ -41,14 +46,13 @@ export default function ContactForm() {
   return (
     <>
       <div className={`${showSendEmailMessage ? styles.open : ''} ${styles.sendEmailMessageBox}`}>
-        <h5>Email enviado com sucesso!</h5>
-        <button
-          onClick={() => setMobileMenuOpen(false)}
-        >
+        <h6>Email enviado com sucesso!</h6>
+        <button className={styles.xmark} onClick={() => setShowSendEmailMessage(false)}>
           <FontAwesomeIcon icon={faXmark} />
         </button>
       </div>
-      <form id="form" data-parsley-validate>
+
+      <form id="form" data-parsley-validate onSubmit={handleFormSubmit}>
         <h4>Formulário de Contato</h4>
 
         <fieldset>
@@ -139,7 +143,7 @@ export default function ContactForm() {
           ></textarea>
         </fieldset>
 
-        <button type="submit" className="medium" onSubmit={handleFormSubmit}>
+        <button type="submit" className="medium">
           Enviar
         </button>
       </form>
