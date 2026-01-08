@@ -17,8 +17,11 @@
 .header {
   padding: 0.8em 2em;
   display: flex;
+  position: sticky;
+  top: 0;
   align-items: center;
   justify-content: space-between;
+  z-index: 8;
 }
 
 .header ul {

@@ -125,7 +125,20 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+  .contato address ul li h6 {
+    font-size: 0.85rem;
+  }
+  .contato address ul li .icon {
+    font-size: 1.5em;
+  }
+  .contato iframe {
+    width: 15rem;
+    height: 18rem;
+  }
+}
+
+@media (max-width: 900px) {
   .contato section {
     flex-direction: column;
   }
@@ -145,7 +158,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .contato section {
     flex-direction: column;
   }
