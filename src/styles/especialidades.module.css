@@ -30,7 +30,7 @@
   width: 100%;
   position: absolute;
   bottom: 0; /* gruda na parte inferior */
-  transition: all 0.7ss ease-in-out;
+  transition: all 0.7s ease-in-out;
   padding-top: 1rem;
 }
 
